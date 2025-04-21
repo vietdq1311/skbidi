@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thử lòng người yêu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #ffeef2;
+    }
+
+    h1 {
+      color: #e91e63;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+    #result {
+      margin-top: 40px;
+      font-size: 24px;
+      color: #333;
+      min-height: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💕 Anh có yêu em không á? 💕</h1>
+  <button onclick="trollAnswer()">Nhấn để biết sự thật 😳</button>
+
+  <div id="result"></div>
+
+  <script>
+    const phrases = [
+      "Có CHIN",
+      "Yêu CHIN",
+      "Yêu CHIN",
+      "Yêu CHIN",
+      "Yêu CHIN",
+      "cái gì quan trọng thì nói 3 lần để xem lại 🤔",
+    ];
+
+    function trollAnswer() {
+      const result = document.getElementById("result");
+      const random = Math.floor(Math.random() * phrases.length);
+      result.textContent = phrases[random];
+    }
+  </script>
+
+</body>
+</html>
